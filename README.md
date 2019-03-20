@@ -7,3 +7,9 @@
 #### items中定义SQL语句
 #### pipelines与Mysql交互
 #### middlewares中定义了随机UA方法，代理方法，selenium自动化方法
+
+
+# check_express.py
+### requests, Tkinter
+    使用requests模块的post方法发送query_data调用快递查询网站的数据，实现查询快递信息的功能，
+    使用自带Tkinter的GUI模块，制作简易的图形界面
