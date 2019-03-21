@@ -2,8 +2,8 @@
 此程序将会爬取网络上公开的代理`ip`地址信息并保存到`Mysql`数据库中。
 
 
-# 如何启动
-## 数据库配置
+## 如何启动
+### 数据库配置
 * 导入`pymysql`模块中配置`mysql`数据库的链接信息:
     ```python3
         host = '127.0.0.1'  
@@ -18,14 +18,14 @@
         cursor = conn.cursor()
     ```
 
-## 程序启动
+### 程序启动
 在`crawl_proxy`目录中，执行如下命令启动程序：
 
 ```python3
     python xxxx.py
 ```
 
-# 如何处理页面反爬
+## 如何处理页面反爬
 * `crawl_gbj_proxy.py`爬取的公开代理`ip`地址页面地址是: `http://www.goubanjia.com/`。
 * 此页面拥有反爬措施:
     1. 访问页面的时候，网页显示的公开代理地址列表中的所有端口号与真实的response响应中的端口号不一样的，。
@@ -34,9 +34,9 @@
 * solution:
     使用`selenium`模拟浏览器行为发起请求，在`.page_source`方法中会返回正确端口的页面`html`数据。
 
-# 如何验证代理地址的正确性
+## 如何验证代理地址的正确性
 
-## 定义`handle_proxy.py`程序
+### 定义`handle_proxy.py`程序
 
 此程序将保存在`Mysql`数据库中的数据协议`procotol`，`ip`地址，端口号`port`提取出来提取出来做验证。
 
@@ -65,7 +65,8 @@
 * 集成`selenium`到`scrapy`中，在符合要求的url时调用selenium
 
 
-# check_express.py
-### requests, Tkinter
-    使用requests模块的post方法发送query_data调用快递查询网站的数据，实现查询快递信息的功能，
-    使用自带Tkinter的GUI模块，制作简易的图形界面
+# 检查快递（check_express目录下）
+### `requests`, `Tkinter`
+    使用`requests`模块的`post`方法发送`query_data`调用快递查询网站的数据，实现查询快递信息的功能;
+    使用自带Tkinter的GUI模块，制作简易的图形界面;
+    支持京东，顺丰，申通等常用快递查询。
