@@ -58,7 +58,7 @@ class Express(object):
 
 if __name__ == '__main__':
     window = tk.Tk()
-    window.title("快递查询")
+    window.title("快递查询GUI")
     window.geometry("623x450")
     window.resizable(0, 0)
 
