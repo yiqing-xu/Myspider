@@ -68,5 +68,5 @@
 # 检查快递（check_express目录下）
 ### `requests`, `Tkinter`
 * 使用`requests`模块的`post`方法发送`query_data`调用快递查询网站的数据，实现查询快递信息的功能;
-* 使用自带Tkinter的GUI模块，制作简易的图形界面;
+* 使用自带`Tkinter`的`GUI`模块，制作简易的图形界面;
 * 支持京东，顺丰，申通等常用快递查询。
