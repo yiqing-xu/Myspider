@@ -48,9 +48,10 @@
 # `srapy`爬虫（`Myspider`目录下）
 ### 在`myspider`中是一个`scrapy`框架完成的爬虫。
 * `spiders`文件夹中：
-*        `csdn.py`通过`scrapy`中的`crawlspider`模板创建，通过匹配正确的`LinkExtractor(allow=r'https://blog.csdn.net/\w+/article/details/\d+')`网址，全站爬取`csdn`网站上的文章和招聘信息；
+* `csdn.py`通过`scrapy`中的`crawlspider`模板创建，通过匹配正确的`LinkExtractor(allow=r'https://blog.csdn.net/\w+/article/details/\d+')`网址，全站爬取`csdn`网站上的文章和招聘信息；
 * `jobbole.py`抓取伯乐在线的文章内容，此爬虫中使用定义`ItemLoader`，达到在`spider`中简化程序，将数据在`items`中定义函数处理的效果；
-* `ddebook.py`爬取当当网电子图书。
+* `ddebook.py`爬取当当网电子图书，当当网在多次请求后就会返回`302`的重定向的错误界面，此时可使用随机UA及IP代理池抽取IP代理的方法达到反爬的效果，另外在`scrapy.Request`中传递数据时使用`deepcopy`方法使得`item`的数据不会重复和混乱。
+
 #### items中定义SQL语句
 #### pipelines与Mysql交互
 #### middlewares中定义了随机UA方法，代理方法，selenium自动化方法
