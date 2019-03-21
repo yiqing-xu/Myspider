@@ -62,7 +62,7 @@
 ### middlewares
 * `pip install fake_useragent`，使用第三方库的UA，`from fake_useragent import UserAgent`并实例化，达到每一次请求使用随机UA的功能；
 * 定义使用代理的类对象，将前面的爬取代理的程序集成到`scrapy`中；
-* 集成`selenium`到`scrapy`中，在符合要求的url时调用selenium
+* 集成`selenium`到`scrapy`中，在下载符合要求的url时调用`selenium`
 
 
 # 检查快递（check_express目录下）
